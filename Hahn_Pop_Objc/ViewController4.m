@@ -35,6 +35,12 @@
 #pragma mark - 返回按钮
 - (void)backBtn
 {
+
+    /**
+    通过循环找到指定控制器返回
+    @param MainViewController 返回的指定控制器
+    */
+    
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:[MainViewController class]]) {
             [self.navigationController popToViewController:vc animated:YES];

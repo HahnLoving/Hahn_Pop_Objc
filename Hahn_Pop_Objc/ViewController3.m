@@ -19,6 +19,11 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     
+    /**
+    通过循环找到指定控制器删除
+    @param ViewController1 返回的指定控制器
+    */
+    
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:[ViewController1 class]]) {
             [vc removeFromParentViewController];
